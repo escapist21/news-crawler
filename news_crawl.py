@@ -27,12 +27,12 @@ def news_searcher(url_file):
         description = []
 
         for url in urls:
-            print('Downloading news from {}'.format(url))
+            print('Downloading news from {}'.format(url[0]))
 
 
             for i in range(last_page):
                 print('Downloading from page {}'.format(i+1))
-                search_results = google.search('site:{} {}'.format(url, district), first_page=i+1, sort_by_date=True)
+                search_results = google.search('site:{} {}'.format(url[0], district), first_page=i+1, sort_by_date=True)
 
                 for result in search_results:
                     name.append(result.name)
