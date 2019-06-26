@@ -1,4 +1,5 @@
 from time import sleep
+import random
 import csv
 from google import google
 import pandas as pd
@@ -38,11 +39,11 @@ def news_searcher(url_file):
                     name.append(result.name)
                     link.append(result.link)
                     description.append(result.description)
-                sleep(5)
+                sleep(random.randint(1, 64))
 
-            sleep(30)
+            sleep(random.randint(1, 64))
 
-        sleep(60)
+        sleep(random.randint(1, 64))
 
         data_tuple = list(zip(name, link, description))
 
