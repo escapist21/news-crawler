@@ -28,20 +28,21 @@ def news_searcher(url_file):
 
         for url in urls:
             print('Downloading news from {}'.format(url))
-            i = 1
 
-            for i in range(last_page+1):
-                print('Downloading from page {}'.format(i))
-                search_results = google.search('site:{} {}'.format(url, district), first_page=i, sort_by_date=True)
+
+            for i in range(last_page):
+                print('Downloading from page {}'.format(i+1))
+                search_results = google.search('site:{} {}'.format(url, district), first_page=i+1, sort_by_date=True)
 
                 for result in search_results:
                     name.append(result.name)
                     link.append(result.link)
                     description.append(result.description)
+                sleep(5)
 
             sleep(30)
 
-        sleep(300)
+        sleep(60)
 
         data_tuple = list(zip(name, link, description))
 
