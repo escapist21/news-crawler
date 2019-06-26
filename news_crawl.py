@@ -3,7 +3,7 @@ import csv
 from google import google
 import pandas as pd
 
-num_page = 40
+last_page = 40
 url_file = 'english_url.csv'
 districts = ['sahebganj', 'pakur', 'dumka', 'jamtara', 'deoghar', 'godda', 'koderma', 'hazaribagh',
              'chatra', 'giridih', 'bokaro', 'bokaro', 'dhanbad', 'east singhbhum', 'seraikella kharsawan', 'west singhbum',
@@ -28,13 +28,16 @@ def news_searcher(url_file):
 
         for url in urls:
             print('Downloading news from {}'.format(url))
-            search_results = google.search('site:{} {}'.format(url, district), num_page)
-            print('news downloaded: {}'.format(len(search_results)))
+            i = 1
 
-            for result in search_results:
-                name.append(result.name)
-                link.append(result.link)
-                description.append(result.description)
+            for i in range(last_page+1):
+                print('Downloading from page {}'.format(i))
+                search_results = google.search('site:{} {}'.format(url, district), first_page=i, sort_by_date=True)
+
+                for result in search_results:
+                    name.append(result.name)
+                    link.append(result.link)
+                    description.append(result.description)
 
             sleep(30)
 
