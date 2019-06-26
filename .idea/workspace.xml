@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc2126b2-fc44-4e9e-9a67-e15845c4078e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/english_url.csv" beforeDir="false" afterPath="$PROJECT_DIR$/english_url.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news_crawl.py" beforeDir="false" afterPath="$PROJECT_DIR$/news_crawl.py" afterDir="false" />
-    </list>
+    <list default="true" id="bc2126b2-fc44-4e9e-9a67-e15845c4078e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561546255128</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="removed bug from loop behavior">
+      <created>1561546650775</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1561546650775</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -225,7 +228,8 @@
     <MESSAGE value="removed bug" />
     <MESSAGE value="introduced sleep time in crawler between loops" />
     <MESSAGE value="added time sorting for results" />
-    <option name="LAST_COMMIT_MESSAGE" value="added time sorting for results" />
+    <MESSAGE value="removed bug from loop behavior" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed bug from loop behavior" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
