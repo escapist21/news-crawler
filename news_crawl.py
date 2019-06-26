@@ -1,9 +1,10 @@
+from time import sleep
 import csv
 from google import google
 import pandas as pd
 
 num_page = 100
-url_file = ''
+url_file = 'english_url.csv'
 districts = ['sahebganj', 'pakur', 'dumka', 'jamtara', 'deoghar', 'godda', 'koderma', 'hazaribagh',
              'chatra', 'giridih', 'bokaro', 'bokaro', 'dhanbad', 'east singhbhum', 'seraikella kharsawan', 'west singhbum',
              'ranchi', 'khunti', 'gumla', 'simdega', 'lohardaga', 'latehar', 'palamu', 'garhwa']
@@ -26,12 +27,15 @@ def news_searcher(url_file):
         description = []
 
         for url in urls:
+            print('Downloading news from {}'.format(url))
             search_results = google.search('site:{} {}'.format(url, district), num_page)
+            print('news downloaded: {}'.format(search_results.count()))
 
             for result in search_results:
                 name.append(result.name)
                 link.append(result.link)
                 description.append(result.description)
+                sleep(120)
 
         data_tuple = list(zip(name, link, description))
 
@@ -39,9 +43,11 @@ def news_searcher(url_file):
                                columns=['name', 'link','description'])
         results.to_csv('{}.csv'.format(district))
 
+        print('district {} is downloaded'.format(district))
+
 
 def main():
-    news_searcher(url_file=urlfile)
+    news_searcher(url_file=url_file)
 
 
 if __name__ == '__main__':
