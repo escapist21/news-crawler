@@ -21,7 +21,8 @@ def read_csv_file(file, skip_header=True):
 
 def news_searcher(url_file):
     urls = read_csv_file(url_file)
-    for district in districts:
+    district = str(input('Enter name of district: '))
+    if district.lower() in districts:
 
         name = []
         link = []
@@ -41,9 +42,9 @@ def news_searcher(url_file):
                     description.append(result.description)
                 sleep(random.randint(1, 64))
 
-            sleep(random.randint(1, 64))
+            sleep(random.randint(180, 300))
 
-        sleep(random.randint(1, 64))
+        sleep(random.randint(300, 420))
 
         data_tuple = list(zip(name, link, description))
 
