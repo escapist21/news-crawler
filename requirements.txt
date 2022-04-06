@@ -64,7 +64,7 @@ six==1.12.0
 soupsieve==1.9.2
 tinysegmenter==0.3
 tldextract==2.2.1
-Twisted==19.2.1
+Twisted==22.2.0
 Unidecode==1.1.1
 urllib3==1.25.3
 vcrpy==2.0.1
