@@ -30,7 +30,7 @@ jdcal==1.4.1
 jieba3k==0.35.1
 jmespath==0.9.4
 langdetect==1.0.7
-lxml==4.3.4
+lxml==4.9.1
 multidict==4.5.2
 news-please==1.3.14
 newspaper3k==0.2.8
